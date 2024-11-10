@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -276,6 +280,7 @@ html {
 .customers {
     background: var(--light-color, #F5F5F7);
     padding: 80px 0 80px 0;
+
     .divider {
         margin: 3px auto 0px auto;
         transform: translateX(90px);
@@ -286,6 +291,7 @@ html {
     display: flex;
     margin-top: 50px;
     column-gap: 30px;
+
     img {
         box-shadow: 7px 7px 12px 0px rgba(0, 0, 0, 0.25);
     }
@@ -300,6 +306,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     a {
         color: var(--light-color, #F5F5F7);
         font-size: 20px;
@@ -310,6 +317,7 @@ html {
 .social__items {
     display: flex;
     column-gap: 35px;
+
     img {
         width: 32px;
         height: 32px;
@@ -322,4 +330,350 @@ html {
 .address {
     color: var(--light-color, #F5F5F7);
     font-size: 20px;
+}
+
+/* Адаптация  */
+@media (max-width: 1439px) {
+    .keywords {
+        padding: 0px 50px;
+    }
+
+    .about__text {
+        width: 100%;
+    }
+
+    .customers__items {
+        img {
+            width: 280px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .promo__title {
+        font-size: 52px;
+    }
+
+    .promo__subtitle {
+        font-size: 30px;
+    }
+
+    .keywords {
+        padding: 0px 10px;
+
+        #Nature,
+        #Portrait,
+        #Fashion,
+        #Urban {
+            display: none;
+        }
+    }
+
+    .about__text {
+        font-size: 35px;
+    }
+
+    .services {
+        column-gap: 60px;
+    }
+
+    .customers__items {
+        justify-content: center;
+    }
+
+    .footer {
+        padding: 80px 110px 80px 110px;
+    }
+}
+
+@media (max-width: 992px) {
+    .promo__title {
+        font-size: 40px;
+    }
+
+    .promo__subtitle {
+        font-size: 26px;
+    }
+
+    .keywords {
+        padding: 0px 10px;
+
+        #Design,
+        #Clothes {
+            display: none;
+        }
+    }
+
+    .about__text {
+        font-size: 26px;
+    }
+
+    .services__items {
+        width: 100%;
+    }
+
+    .services {
+        flex-wrap: wrap;
+        row-gap: 30px;
+        column-gap: 0px;
+    }
+
+    .services__text {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .divider {
+        transform: translateX(40px);
+    }
+
+    .inspiration {
+        .divider {
+            transform: translateX(75px);
+        }
+    }
+
+
+    .inspiration__grid {
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+
+        .vertical {
+            grid-row: 1 / 3;
+            grid-column: 3 / 5;
+        }
+
+        .horizontal {
+            grid-column: 1 / 5;
+            grid-row: 3 / 4;
+        }
+    }
+
+    .customers {
+        .divider {
+            transform: translateX(80px);
+        }
+    }
+
+    .customers__items {
+        justify-content: center;
+
+        img {
+            width: 230px;
+        }
+    }
+
+    .footer {
+        padding: 80px 30px 80px 30px;
+
+        a {
+            font-size: 18px;
+        }
+
+        .address {
+            font-size: 18px;
+        }
+
+        .social__items {
+            column-gap: 30px;
+        }
+
+        img {
+            width: 29px;
+            height: 29px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --container-padding-inline: 6%;
+        --footer-padding-inline: 6%;
+    }
+
+    .promo__title {
+        font-size: 32px;
+    }
+
+    .promo__subtitle {
+        font-size: 22px;
+    }
+
+    .keywords {
+        padding: 0px 10px;
+
+        #Company,
+        #Family {
+            display: none;
+        }
+    }
+
+    .about__text {
+        font-size: 21px;
+    }
+
+    .services__text {
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 31px;
+    }
+
+    .divider {
+        transform: translateX(30px);
+    }
+
+    .inspiration {
+        .divider {
+            margin: 3px auto 0px auto;
+            transform: translateX(60px);
+        }
+    }
+
+    .inspiration__grid {
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+
+        .vertical {
+            grid-row: 1 / 5;
+            grid-column: 2 / 5;
+        }
+
+        .horizontal {
+            grid-column: 1 / 5;
+            grid-row: 5 / 6;
+        }
+
+    }
+
+    .customers {
+        .divider {
+            transform: translateX(60px);
+        }
+    }
+
+    .customers__items {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+
+    .footer {
+        padding: 50px 30px 50px 30px;
+
+        .footer__block {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    :root {
+        --container-padding-inline: 13px;
+        --footer-padding-inline: 13px;
+    }
+
+    .promo__title {
+        font-size: 26px;
+    }
+
+    .promo__subtitle {
+        font-size: 16px;
+        margin-top: 60px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    .promo__address {
+        margin-top: 250px;
+    }
+
+    .keywords {
+        padding: 0px 10px;
+
+        #Industrial,
+        #Pets,
+        #Style {
+            display: none;
+        }
+    }
+
+    .about__text {
+        font-size: 16px;
+    }
+
+    .services__items-subtitle {
+        font-size: 12px;
+    }
+
+    .services__items {
+        & ul {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .services__text {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .divider {
+        transform: translateX(20px);
+    }
+
+    .works__grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr) 1fr;
+        row-gap: 30px;
+        column-gap: 0px;
+    }
+
+    .inspiration {
+        .divider {
+            transform: translateX(40px);
+        }
+    }
+
+    .inspiration__grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .customers {
+        .divider {
+            transform: translateX(40px);
+        }
+    }
+
+    .footer__block {
+        row-gap: 30px;
+    }
+
+    .footer {
+        img {
+            width: 26px;
+            height: 26px;
+        }
+
+        .address {
+            font-size: 13px;
+        }
+
+        a {
+            font-size: 13px;
+        }
+    }
 }
